@@ -102,10 +102,10 @@ def checkWin(game):
 
 
 #play should be a string with 2 numbers for index like, 'X11' for the first square and  'X21' for the square bellow it (allways describe if X or O before the play)
-def makeaMove(game, play):
-    x, y = int(play[1]) - 1, int(play[2]) - 1
+def makeaMove(game, move):
+    x, y = int(move[1]) - 1, int(move[2]) - 1
     if game[x][y] == 'TRIGGER':
-        game[x][y] = play[0]
+        game[x][y] = move[0]
         return game
     else:
         raise InvalidMoveError('Invalid Move')
